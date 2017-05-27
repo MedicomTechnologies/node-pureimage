@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "jpeg-js": "^0.2.0",
-    "opentype.js": "^0.6.9",
+    "opentype.js": "git+ssh://git@github.com/jssuttles/opentype.js.git",
     "pngjs": "^3.0.0",
     "richtext": "0.0.4"
   },
