@@ -458,6 +458,7 @@ exports.encodeJPEG = function(bitmap, outstream, cb) {
         height:bitmap.height,
     }
     outstream.write(JPEG.encode(data, 50).data,function(){
+        outstream.end();
         if(cb)cb();
     });
 }
