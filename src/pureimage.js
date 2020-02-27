@@ -7,6 +7,7 @@
 
 var opentype = require('opentype.js');
 var fs = require('fs');
+var Buffer = require('buffer');
 var PNG = require('pngjs').PNG;
 var JPEG = require('jpeg-js');
 var trans = require('./transform');
@@ -24,7 +25,7 @@ function Bitmap4BBP(w,h,options) {
     if(options && (typeof options.fillval) !== undefined) {
         fillval = options.fillval;
     }
-    this._buffer = new Buffer(this.width*this.height*4 || 0);
+    this._buffer = Buffer.allocUnsafe(this.width*this.height*4 || 0);
     this.data = this._buffer;
     for(var i=0; i<this.width; i++) {
         for(var j=0; j<this.height; j++) {
