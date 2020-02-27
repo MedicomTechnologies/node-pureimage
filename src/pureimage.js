@@ -7,7 +7,6 @@
 
 var opentype = require('opentype.js');
 var fs = require('fs');
-var Buffer = require('buffer');
 var PNG = require('pngjs').PNG;
 var JPEG = require('jpeg-js');
 var trans = require('./transform');
