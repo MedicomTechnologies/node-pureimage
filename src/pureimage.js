@@ -24,7 +24,7 @@ function Bitmap4BBP(w,h,options) {
     if(options && (typeof options.fillval) !== undefined) {
         fillval = options.fillval;
     }
-    this._buffer = new Buffer(this.width*this.height*4);
+    this._buffer = new Buffer(this.width*this.height*4 || 0);
     this.data = this._buffer;
     for(var i=0; i<this.width; i++) {
         for(var j=0; j<this.height; j++) {
